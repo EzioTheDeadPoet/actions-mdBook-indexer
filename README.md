@@ -55,7 +55,8 @@ Use case:
 ```yaml
 name: Prepare Queries
 on:
-  push: [POST]
+  push: 
+    branches: [POST]
   workflow_dispatch:
 jobs:
     get-num-square:

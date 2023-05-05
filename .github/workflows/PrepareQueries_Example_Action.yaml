@@ -1,6 +1,7 @@
 name: Prepare Queries
 on:
-  push: [POST]
+  push:
+    branches: [POST]
   workflow_dispatch:
 
 jobs:
