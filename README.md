@@ -56,7 +56,7 @@ Use case:
 name: Prepare Queries
 on:
   push: 
-    branches: [POST]
+    branches: [POST] # For this to work this yaml needs to be put on the POST branch
   workflow_dispatch:
 jobs:
     get-num-square:
