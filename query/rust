@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Rust Playground",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Drust#rust-playground",
+    "paragraph_preview": "This works by sending the code to the Rust Playground . println!(\"Hello, World!\"); If there is no main function, then the code is automatically wrapped inside one. If you wish to"
+  },
+  {
+    "title": "Installation \u00bb Build from source using Rust",
+    "href": "https://rust-lang.github.io/mdBook/guide/installation.html%3Fhighlight%3Drust#build-from-source-using-rust",
+    "paragraph_preview": "Rust and Cargo. Follow the instructions on the Rust installation page . mdBook currently requires at least Rust version 1.60. Once you have installed Rust, the following command can be used"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Rust code block attributes",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Drust#rust-code-block-attributes",
+    "paragraph_preview": "The play button is also not shown. compile_fail \u2014 The code should fail to compile. edition2015, edition2018, edition2021 \u2014 Forces the use of a specific Rust edition. See rust.edition to"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Inserting runnable Rust files",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Drust#inserting-runnable-rust-files",
+    "paragraph_preview": "Rust file has to be relative from the current source file. When play is clicked, the code snippet will be sent to the Rust Playground to be compiled and run"
+  },
+  {
+    "title": "Introduction \u00bb Introduction",
+    "href": "https://rust-lang.github.io/mdBook/index.html%3Fhighlight%3Drust#introduction",
+    "paragraph_preview": "Rust code samples This guide is an example of what mdBook produces. mdBook is used by the Rust programming language project, and The Rust Programming Language book is another fine"
+  },
+  {
+    "title": "Format \u00bb Markdown \u00bb Images",
+    "href": "https://rust-lang.github.io/mdBook/format/markdown.html%3Fhighlight%3Drust#images",
+    "paragraph_preview": "this file: ![The Rust Logo](images/rust-logo-blk.svg) Produces the following HTML when built with mdBook: <p><img src=\"images/rust-logo-blk.svg\" alt=\"The Rust Logo\" /></p> Which, of course displays the image like so: The Rust Logo"
+  },
+  {
+    "title": "Continuous Integration \u00bb Running tests",
+    "href": "https://rust-lang.github.io/mdBook/continuous-integration.html%3Fhighlight%3Drust#running-tests",
+    "paragraph_preview": "This can be used to validate Rust code examples in the book. This will require having Rust installed. Some services have Rust pre-installed, but if your service does not, you"
+  },
+  {
+    "title": "Continuous Integration \u00bb Installing mdBook",
+    "href": "https://rust-lang.github.io/mdBook/continuous-integration.html%3Fhighlight%3Drust#installing-mdbook",
+    "paragraph_preview": "Rust installed. Some services have Rust pre-installed, but if your service does not, you will need to add a step to install it. After Rust is installed, cargo install can"
+  },
+  {
+    "title": "Command Line Tool \u00bb test \u00bb The test command",
+    "href": "https://rust-lang.github.io/mdBook/cli/test.html%3Fhighlight%3Drust#the-test-command",
+    "paragraph_preview": "rustdoc doesn't test code blocks which contain the ignore attribute: ```rust,ignore\nfn main() {}\n``` rustdoc also doesn't test code blocks which specify a language other than Rust: ```markdown\n**Foo**: _bar_\n``` rustdoc does"
+  },
+  {
+    "title": "Format \u00bb Configuration \u00bb General \u00bb Supported configuration options",
+    "href": "https://rust-lang.github.io/mdBook/format/configuration/general.html%3Fhighlight%3Drust#supported-configuration-options",
+    "paragraph_preview": "Rust options Options for the Rust language, relevant to running tests and playground integration. [rust]\nedition = \"2015\" # the default edition for code blocks edition : Rust edition to use"
+  },
+  {
+    "title": "Format \u00bb Configuration \u00bb Renderers \u00bb HTML renderer options",
+    "href": "https://rust-lang.github.io/mdBook/format/configuration/renderers.html%3Fhighlight%3Drust#html-renderer-options",
+    "paragraph_preview": "Defaults to 0. [output.html.playground] The [output.html.playground] table provides options for controlling Rust sample code blocks, and their integration with the Rust Playground . [output.html.playground]\neditable = false # allows editing the source"
+  },
+  {
+    "title": "For Developers \u00bb Alternative Backends \u00bb Enabling the Backend",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/backends.html%3Fhighlight%3Drust#enabling-the-backend",
+    "paragraph_preview": "field. [book] title = \"mdBook Documentation\" description = \"Create book from markdown files. Like Gitbook but implemented in Rust\" authors = [\"Mathieu David\", \"Michael-F-Bryan\"] [output.html] [output.wordcount]\n+ command = \"python /path/to/wordcount.py\""
+  },
+  {
+    "title": "Reading Books \u00bb Code blocks",
+    "href": "https://rust-lang.github.io/mdBook/guide/reading.html%3Fhighlight%3Drust#code-blocks",
+    "paragraph_preview": "For Rust code examples, this will execute the sample code and display the compiler output just below the example (see playground ). For Rust code examples, this will toggle visibility"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Including a file but initially hiding all except specified lines",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Drust#including-a-file-but-initially-hiding-all-except-specified-lines",
+    "paragraph_preview": "Rustdoc will use the complete example when you run mdbook test. For example, consider a file named file.rs that contains this Rust program: fn main() { let x = add_one(2);"
+  },
+  {
+    "title": "Format \u00bb Configuration \u00bb Configuration",
+    "href": "https://rust-lang.github.io/mdBook/format/configuration/index.html%3Fhighlight%3Drust#configuration",
+    "paragraph_preview": "This section details the configuration options available in the book.toml : General configuration including the book, rust, build sections Preprocessor configuration for default and custom book preprocessors Renderer configuration for"
+  },
+  {
+    "title": "Format \u00bb Configuration \u00bb General \u00bb General Configuration",
+    "href": "https://rust-lang.github.io/mdBook/format/configuration/general.html%3Fhighlight%3Drust#general-configuration",
+    "paragraph_preview": "You can configure the parameters for your book in the book.toml file. Here is an example of what a book.toml file might look like: [book]\ntitle = \"Example book\"\nauthors = [\"John"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Hiding code lines",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Drust#hiding-code-lines",
+    "paragraph_preview": "Rustdoc . This currently only works with Rust language code blocks. # fn main() { let x = 5; let y = 6; println!(\"{}\", x + y);\n# } Will render as"
+  },
+  {
+    "title": "Format \u00bb Theme \u00bb Syntax highlighting \u00bb Syntax Highlighting",
+    "href": "https://rust-lang.github.io/mdBook/format/theme/syntax-highlighting.html%3Fhighlight%3Drust#syntax-highlighting",
+    "paragraph_preview": "mdBook uses Highlight.js with a custom theme for syntax highlighting. Automatic language detection has been turned off, so you will probably want to specify the programming language you use like"
+  },
+  {
+    "title": "For Developers \u00bb Alternative Backends \u00bb Setting Up",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/backends.html%3Fhighlight%3Drust#setting-up",
+    "paragraph_preview": "Although it will be written in Rust, there's no reason why it couldn't be accomplished using something like Python or Ruby. First you'll want to create a new binary program"
+  },
+  {
+    "title": "Format \u00bb Theme \u00bb Syntax highlighting \u00bb Supported languages",
+    "href": "https://rust-lang.github.io/mdBook/format/theme/syntax-highlighting.html%3Fhighlight%3Drust#supported-languages",
+    "paragraph_preview": "http ini java javascript json julia kotlin less lua makefile markdown nginx objectivec perl php plaintext properties python r ruby rust scala scss shell sql swift typescript x86asm xml yaml"
+  }
+]

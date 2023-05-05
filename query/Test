@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Command Line Tool \u00bb test \u00bb The test command",
+    "href": "https://rust-lang.github.io/mdBook/cli/test.html%3Fhighlight%3DTest#the-test-command",
+    "paragraph_preview": "tests in a book. At the moment, only rustdoc tests are supported, but this may be expanded upon in the future. Disable tests on a code block rustdoc doesn't test"
+  },
+  {
+    "title": "Continuous Integration \u00bb Running tests",
+    "href": "https://rust-lang.github.io/mdBook/continuous-integration.html%3Fhighlight%3DTest#running-tests",
+    "paragraph_preview": "test from the book directory. You may also want to consider running other kinds of tests, like mdbook-linkcheck which will check for broken links. Or if you have your own"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Rust code block attributes",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3DTest#rust-code-block-attributes",
+    "paragraph_preview": "For example: ```rust,ignore\n# This example won't be tested.\npanic!(\"oops!\");\n``` These are particularly important when using mdbook test to test Rust examples. These use the same attributes as rustdoc attributes , with"
+  },
+  {
+    "title": "For Developers \u00bb Preprocessors \u00bb Hooking Into MDBook",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/preprocessors.html%3Fhighlight%3DTest#hooking-into-mdbook",
+    "paragraph_preview": "test { use super::*; #[test] fn nop_preprocessor_run() { let input_json = r##\"[ { \"root\": \"/path/to/book\", \"config\": { \"book\": { \"authors\": [\"AUTHOR\"], \"language\": \"en\", \"multilingual\": false, \"src\": \"src\", \"title\": \"TITLE\" },"
+  },
+  {
+    "title": "Introduction \u00bb Introduction",
+    "href": "https://rust-lang.github.io/mdBook/index.html%3Fhighlight%3DTest#introduction",
+    "paragraph_preview": "testing of Rust code samples This guide is an example of what mdBook produces. mdBook is used by the Rust programming language project, and The Rust Programming Language book is"
+  },
+  {
+    "title": "Command Line Tool \u00bb Command Line Tool",
+    "href": "https://rust-lang.github.io/mdBook/cli/index.html%3Fhighlight%3DTest#command-line-tool",
+    "paragraph_preview": "mdbook serve \u2014 Runs a web server to view the book, and rebuilds on changes. mdbook test \u2014 Tests Rust code samples. mdbook clean \u2014 Deletes the rendered output. mdbook"
+  },
+  {
+    "title": "Format \u00bb Configuration \u00bb Renderers \u00bb Markdown Renderer",
+    "href": "https://rust-lang.github.io/mdBook/format/configuration/renderers.html%3Fhighlight%3DTest#markdown-renderer",
+    "paragraph_preview": "test to see the Markdown that mdbook is passing to rustdoc. The Markdown renderer is included with mdbook but disabled by default. Enable it by adding an empty table to"
+  },
+  {
+    "title": "Continuous Integration \u00bb Running mdbook in Continuous Integration",
+    "href": "https://rust-lang.github.io/mdBook/continuous-integration.html%3Fhighlight%3DTest#running-mdbook-in-continuous-integration",
+    "paragraph_preview": "test and deploy your book automatically. The following provides some general guidelines on how to configure your service to run mdBook. Specific recipes can be found at the Automated Deployment"
+  },
+  {
+    "title": "For Developers \u00bb Alternative Backends \u00bb Enabling the Backend",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/backends.html%3Fhighlight%3DTest#enabling-the-backend",
+    "paragraph_preview": "Now we've got the basics running, we want to actually use it. First, install the program. $ cargo install --path . Then cd to the particular book you'd like to count"
+  },
+  {
+    "title": "Command Line Tool \u00bb init \u00bb The init command",
+    "href": "https://rust-lang.github.io/mdBook/cli/init.html%3Fhighlight%3DTest#the-init-command",
+    "paragraph_preview": "There is some minimal boilerplate that is the same for every new book. It's for this purpose that mdBook includes an init command. The init command is used like this:"
+  },
+  {
+    "title": "Command Line Tool \u00bb serve \u00bb The serve command",
+    "href": "https://rust-lang.github.io/mdBook/cli/serve.html%3Fhighlight%3DTest#the-serve-command",
+    "paragraph_preview": "Note: The serve command is for testing a book's HTML output, and is not intended to be a complete HTTP server for a website. Specify a directory The serve command"
+  },
+  {
+    "title": "Format \u00bb Configuration \u00bb General \u00bb Supported configuration options",
+    "href": "https://rust-lang.github.io/mdBook/format/configuration/general.html%3Fhighlight%3DTest#supported-configuration-options",
+    "paragraph_preview": "tests and playground integration. [rust]\nedition = \"2015\" # the default edition for code blocks edition : Rust edition to use by default for the code snippets. Default is \"2015\". Individual"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Including a file but initially hiding all except specified lines",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3DTest#including-a-file-but-initially-hiding-all-except-specified-lines",
+    "paragraph_preview": "This way, a reader can expand the snippet to see the complete example, and Rustdoc will use the complete example when you run mdbook test. For example, consider a file"
+  },
+  {
+    "title": "Format \u00bb SUMMARY.md \u00bb SUMMARY.md",
+    "href": "https://rust-lang.github.io/mdBook/format/summary.html%3Fhighlight%3DTest#summarymd",
+    "paragraph_preview": "The summary file is used by mdBook to know what chapters to include, in what order they should appear, what their hierarchy is and where the source files are. Without"
+  }
+]

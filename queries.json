@@ -1,0 +1,22 @@
+[
+  {
+    "query": "Setup",
+    "cached": true,
+    "empty": true
+  },
+  {
+    "query": "Test",
+    "cached": true,
+    "empty": false
+  },
+  {
+    "query": "rust",
+    "cached": true,
+    "empty": false
+  },
+  {
+    "query": "code",
+    "cached": true,
+    "empty": false
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Reading Books \u00bb Code blocks",
+    "href": "https://rust-lang.github.io/mdBook/guide/reading.html%3Fhighlight%3Dcode#code-blocks",
+    "paragraph_preview": "For Rust code examples, this will execute the sample code and display the compiler output just below the example (see playground ). For Rust code examples, this will toggle visibility"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Hiding code lines",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Dcode#hiding-code-lines",
+    "paragraph_preview": "code lines by prepending them with a # like you would with Rustdoc . This currently only works with Rust language code blocks. # fn main() { let x = 5;"
+  },
+  {
+    "title": "Format \u00bb Theme \u00bb Syntax highlighting \u00bb Hiding code lines",
+    "href": "https://rust-lang.github.io/mdBook/format/theme/syntax-highlighting.html%3Fhighlight%3Dcode#hiding-code-lines",
+    "paragraph_preview": "code examples that are annotated with rust. Because it would collide with semantics of some programming languages. In the future, we want to make this configurable through the book.toml so"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Rust code block attributes",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Dcode#rust-code-block-attributes",
+    "paragraph_preview": "no_run \u2014 The code is compiled when tested, but it is not run. The play button is also not shown. compile_fail \u2014 The code should fail to compile. edition2015, edition2018,"
+  },
+  {
+    "title": "Format \u00bb Configuration \u00bb Renderers \u00bb HTML renderer options",
+    "href": "https://rust-lang.github.io/mdBook/format/configuration/renderers.html%3Fhighlight%3Dcode#html-renderer-options",
+    "paragraph_preview": "code\nrunnable = true # displays a run button for rust code editable: Allow editing the source code. Defaults to false. copyable: Display the copy button on code snippets. Defaults to"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Rust Playground",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Dcode#rust-playground",
+    "paragraph_preview": "code blocks will automatically get a play button () which will execute the code and display the output just below the code block. This works by sending the code to"
+  },
+  {
+    "title": "Command Line Tool \u00bb test \u00bb The test command",
+    "href": "https://rust-lang.github.io/mdBook/cli/test.html%3Fhighlight%3Dcode#the-test-command",
+    "paragraph_preview": "Disable tests on a code block rustdoc doesn't test code blocks which contain the ignore attribute: ```rust,ignore\nfn main() {}\n``` rustdoc also doesn't test code blocks which specify a language other"
+  },
+  {
+    "title": "Format \u00bb mdBook-specific features \u00bb Inserting runnable Rust files",
+    "href": "https://rust-lang.github.io/mdBook/format/mdbook.html%3Fhighlight%3Dcode#inserting-runnable-rust-files",
+    "paragraph_preview": "code snippet to see me\");\n} Any additional values passed after the filename will be included as attributes of the code block. For example {{#playground example.rs editable}} will create the code"
+  },
+  {
+    "title": "Introduction \u00bb Introduction",
+    "href": "https://rust-lang.github.io/mdBook/index.html%3Fhighlight%3Dcode#introduction",
+    "paragraph_preview": "code samples This guide is an example of what mdBook produces. mdBook is used by the Rust programming language project, and The Rust Programming Language book is another fine example"
+  },
+  {
+    "title": "Format \u00bb Theme \u00bb Theme",
+    "href": "https://rust-lang.github.io/mdBook/format/theme/index.html%3Fhighlight%3Dcode#theme",
+    "paragraph_preview": "code snippets, you should not need to modify this. highlight.css is the theme used for the code highlighting. favicon.svg and favicon.png the favicon that will be used. The SVG version"
+  },
+  {
+    "title": "Format \u00bb Theme \u00bb Editor \u00bb Editor",
+    "href": "https://rust-lang.github.io/mdBook/format/theme/editor.html%3Fhighlight%3Dcode#editor",
+    "paragraph_preview": "In addition to providing runnable code playgrounds, mdBook optionally allows them to be editable. In order to enable editable code blocks, the following needs to be added to the book.toml"
+  },
+  {
+    "title": "Introduction \u00bb Contributing",
+    "href": "https://rust-lang.github.io/mdBook/index.html%3Fhighlight%3Dcode#contributing",
+    "paragraph_preview": "mdBook is free and open source. You can find the source code on GitHub and issues and feature requests can be posted on the GitHub issue tracker . mdBook relies on"
+  },
+  {
+    "title": "Format \u00bb Configuration \u00bb General \u00bb Supported configuration options",
+    "href": "https://rust-lang.github.io/mdBook/format/configuration/general.html%3Fhighlight%3Dcode#supported-configuration-options",
+    "paragraph_preview": "[rust]\nedition = \"2015\" # the default edition for code blocks edition : Rust edition to use by default for the code snippets. Default is \"2015\". Individual code blocks can be"
+  },
+  {
+    "title": "For Developers \u00bb Preprocessors \u00bb Hooking Into MDBook",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/preprocessors.html%3Fhighlight%3Dcode#hooking-into-mdbook",
+    "paragraph_preview": "The preprocessor should exit with a status code 0 if it supports the given renderer, or return a non-zero exit code if it does not. If the preprocessor supports the"
+  },
+  {
+    "title": "For Developers \u00bb Preprocessors \u00bb Preprocessors",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/preprocessors.html%3Fhighlight%3Dcode#preprocessors",
+    "paragraph_preview": "code which gets run immediately after the book is loaded and before it gets rendered, allowing you to update and mutate the book. Possible use cases are: Creating custom helpers"
+  },
+  {
+    "title": "For Developers \u00bb Preprocessors \u00bb Implementing a preprocessor with a different language",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/preprocessors.html%3Fhighlight%3Dcode#implementing-a-preprocessor-with-a-different-language",
+    "paragraph_preview": "The following code shows how to implement a simple preprocessor in Python, which will modify the content of the first chapter. The example below follows the configuration shown above with"
+  },
+  {
+    "title": "For Developers \u00bb Alternative Backends \u00bb Output and Signalling Failure",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/backends.html%3Fhighlight%3Dcode#output-and-signalling-failure",
+    "paragraph_preview": "code as a rendering failure. For example, if we wanted to make sure all chapters have an even number of words, erroring out if an odd number is encountered, then"
+  },
+  {
+    "title": "Continuous Integration \u00bb Running tests",
+    "href": "https://rust-lang.github.io/mdBook/continuous-integration.html%3Fhighlight%3Dcode#running-tests",
+    "paragraph_preview": "This can be used to validate Rust code examples in the book. This will require having Rust installed. Some services have Rust pre-installed, but if your service does not, you"
+  },
+  {
+    "title": "For Developers \u00bb Alternative Backends \u00bb Wrapping Up",
+    "href": "https://rust-lang.github.io/mdBook/for_developers/backends.html%3Fhighlight%3Dcode#wrapping-up",
+    "paragraph_preview": "the start of this chapter should serve as a good example of how it's done in real life, so feel free to skim through the source code or ask questions."
+  },
+  {
+    "title": "Format \u00bb Theme \u00bb Syntax highlighting \u00bb Syntax Highlighting",
+    "href": "https://rust-lang.github.io/mdBook/format/theme/syntax-highlighting.html%3Fhighlight%3Dcode#syntax-highlighting",
+    "paragraph_preview": "for syntax highlighting. Automatic language detection has been turned off, so you will probably want to specify the programming language you use like this: ```rust\nfn main() { // Some code\n}\n```"
+  }
+]
