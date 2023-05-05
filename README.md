@@ -102,7 +102,7 @@ jobs:
             regenerate_cache: "True"
 ```
 
-Formatting and content of the queries.json on the GET branch:
+Formatting and content of the queries.json on the POST branch:
 ```json
 [
   {
