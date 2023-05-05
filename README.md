@@ -40,7 +40,9 @@ You might have already encountered various communities offering tools or service
 3. You should use the queries.json to send a list to your tool/bot of pre-cached queries to avoid similar queries and use as many existing ones as possible.(Not mandatory but it will improve the user experience drastically since they don't have to wait until their new query got cached.)
 4. The `raw.` links this tool relies on cache existing files for 5 minutes. So if a new query got added and then a regeneration was triggered that new query will take ~5minutes to update to the results of the updated website.
 5. THIS IS STATIC AND SLOW!!
-  - But it is so by design!
+   - This is because for the intended use it doesn't need to be fast, just faster and easier than setting up and editing Dyno custom tags.
+
+![visualization](assets/Pseudo_API_Visualization.drawio.svg)
 
 ## Using this action
 
