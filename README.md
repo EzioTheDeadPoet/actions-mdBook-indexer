@@ -13,7 +13,8 @@ Use case:
 ```yaml
 name: Prepare Queries
 on:
-    workflow_dispatch:
+  push: [POST]
+  workflow_dispatch:
 jobs:
     get-num-square:
       runs-on: ubuntu-latest
@@ -26,7 +27,6 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             mbBook_url: https://rust-lang.github.io/mdBook/
             api_repo: ${{ github.repository }}
-            api_branch: API
 
 ```
 
@@ -56,7 +56,6 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             mbBook_url: https://rust-lang.github.io/mdBook/
             api_repo: ${{ github.repository }}
-            api_branch: API
-            regenerate_cache: true
+            regenerate_cache: "1"
 
 ```

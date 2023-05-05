@@ -73,14 +73,15 @@ def generate_query_json(query):
         return len(results) == 0
 
 
-def process_queries_json(queries_path):
+def process_queries_json(queries_in_path, queries_out_path):
     print("Start Processing queries.json")
-    queries = json.loads(open(queries_path, "r").read())
+    queries_in = json.loads(open(queries_in_path, "r").read())
+    queries_out = json.loads(open(queries_out_path, "r").read())
     processed_queries = []
-    for query in queries:
+    for query in queries_in:
         query_read = Query(**query)
         result = None
-        if not query_read.cached or reprocess_cache:
+        if (not any(Query(**q).query == query_read.query for q in queries_out)) or reprocess_cache:
             result = generate_query_json(query_read.query)
         processed_queries.append(Query(query_read.query, True, result))
     print("Done processing queries.json")
@@ -91,11 +92,12 @@ def start():
     print("Start Static API generation")
     if reprocess_cache:
         print("Reprocessing Cache Mode Active")
-    queries_path = sys.argv[0].replace("generate_index_JSON.py", "out/queries.json")
-    queries_json = process_queries_json(queries_path)
-    p = Path(os.path.dirname(queries_path))
+    queries_read_path = sys.argv[0].replace("generate_index_JSON.py", "input/queries.json")
+    queries_write_path = sys.argv[0].replace("generate_index_JSON.py", "out/queries.json")
+    p = Path(os.path.dirname(queries_write_path))
     p.mkdir(exist_ok=True)
-    with open(queries_path, "w") as outfile:
+    queries_json = process_queries_json(queries_read_path, queries_write_path)
+    with open(queries_write_path, "w") as outfile:
         outfile.write(queries_json)
     driver.close()
     print("Exit")

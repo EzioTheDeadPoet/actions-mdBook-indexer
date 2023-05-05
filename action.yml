@@ -8,16 +8,20 @@ inputs:
     description: 'mdBook based website, that you want to search via an "api"'
     required: true
   api_repo:
-    descripion: 'repository housing the "api"'
+    description: 'repository housing the "api"'
     required: true
-  api_branch:
-    description: 'Branch name for the branch that will be housing the json files for the "api". Default = `"API"`'
+  get_branch:
+    description: 'Branch name for the branch that will be housing the json files for the "api" to GET. Default = `"GET"`'
     required: true
-    default: "API"
+    default: "GET"
+  post_branch:
+    description: 'Branch name for the branch to configure the list of queries. Default = `"POST"`'
+    required: true
+    default: "POST"
   regenerate_cache:
     description: 'Regenerates the whole queries cache when `true`. Should only be used when the mdBook site updated. Default = `false`'
     required: false
-    default: false
+    default: "False"
 branding:
   icon: search
   color: 'blue'
@@ -36,22 +40,28 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: 'EzioTheDeadPoet/actions-mdBook-indexer'
-    - name: Get API Cache Branch
+    - name: Get API Cache [${{ inputs.get_branch }}] Branch
       uses: actions/checkout@v3
       with:
         ref: ${{ inputs.api_branch }}
         path: ./src/out
+        fetch-depth: 0
+    - name: Get API input [${{ inputs.post_branch }}] Branch
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ inputs.api_branch }}
+        path: ./src/input
         fetch-depth: 0
     - name: Install Python Dependencies
       run: pip install -r ./requirements.txt
       shell: bash
     - name: Generate raw.JSON mdBook api
       id: index_task
-      run: python src/generate_index_JSON.py ${{ inputs.mbBook_url }} ${{ github.repository }} ${{ inputs.api_branch }} ${{inputs.regenerate_cache}}
+      run: python src/generate_index_JSON.py ${{ inputs.mbBook_url }} ${{inputs.regenerate_cache}}
       shell: bash
     - name: Deploy raw.JSON mdBook api
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ inputs.github_token }}
         publish_dir: ./src/out
-        publish_branch: ${{ inputs.api_branch }}
+        publish_branch: ${{ inputs.get_branch }}
