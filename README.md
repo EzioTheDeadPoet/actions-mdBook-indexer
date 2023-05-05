@@ -56,7 +56,7 @@ Use case:
 name: Prepare Queries
 on:
   push: 
-    branches: [POST]
+    branches: [POST] # This yaml must be on the same [POST] branch for this to work
   workflow_dispatch:
 jobs:
     get-num-square:
@@ -65,7 +65,7 @@ jobs:
       steps:
         - name: RUN PSEUDO-API Generator
           id: query_generator
-          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@1.0
+          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@2.0
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             mbBook_url: https://rust-lang.github.io/mdBook/
@@ -94,7 +94,7 @@ jobs:
       steps:
         - name: Run PSEUDO-API Generator
           id: query_generator
-          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@1.0
+          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@2.0
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             mbBook_url: https://rust-lang.github.io/mdBook/
