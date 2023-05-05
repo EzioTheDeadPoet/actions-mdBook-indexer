@@ -17,7 +17,7 @@ mdBook_url = sys.argv[1]  # URL to mdBook website
 post_queries_json = "./out/queries.json"
 reprocess_cache = False
 if len(sys.argv) > 2:
-    reprocess_cache = sys.argv[2]  # to define if triggered by site deployment
+    reprocess_cache = sys.argv[2]  # boolean if everything should be re-queried
 
 
 class Query(dict):
@@ -94,8 +94,10 @@ def start():
         print("Reprocessing Cache Mode Active")
     queries_read_path = sys.argv[0].replace("generate_index_JSON.py", "input/queries.json")
     queries_write_path = sys.argv[0].replace("generate_index_JSON.py", "out/queries.json")
-    p = Path(os.path.dirname(queries_write_path))
-    p.mkdir(exist_ok=True)
+    w = Path(os.path.dirname(queries_write_path))
+    w.mkdir(exist_ok=True)
+    r = Path(os.path.dirname(queries_read_path))
+    r.mkdir(exist_ok=True)
     queries_json = process_queries_json(queries_read_path, queries_write_path)
     with open(queries_write_path, "w") as outfile:
         outfile.write(queries_json)
