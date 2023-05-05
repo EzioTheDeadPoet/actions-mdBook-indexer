@@ -39,7 +39,7 @@ runs:
     - name: Install API Generator (Checkout Code)
       uses: actions/checkout@v3
       with:
-        repository: 'EzioTheDeadPoet/actions-mdBook-indexer'
+        repository: 'EzioTheDeadPoet/mdBook_rawJSON_api_generator'
     - name: Get API Cache [${{ inputs.get_branch }}] Branch
       uses: actions/checkout@v3
       with:

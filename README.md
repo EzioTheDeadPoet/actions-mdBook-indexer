@@ -24,7 +24,7 @@ jobs:
       steps:
         - name: RUN PSEUDO-API Generator
           id: query_generator
-          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@2.0
+          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@2.2
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             mbBook_url: https://rust-lang.github.io/mdBook/
@@ -53,7 +53,7 @@ jobs:
       steps:
         - name: Run PSEUDO-API Generator
           id: query_generator
-          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@2.0
+          uses: EzioTheDeadPoet/mdBook_rawJSON_api_generator@2.2
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             mbBook_url: https://rust-lang.github.io/mdBook/
